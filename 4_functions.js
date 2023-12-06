@@ -1,75 +1,91 @@
-//* Functions
+//* 1. Functions
 // declare
-// invoke/call
+// invoke/call ()
 
 // old
 function oldFunction() {
-  console.log('Hello world!');
+	// code logic
+	console.log('Hello world!');
 }
 
 // new
 const newFunction = () => {
-  console.log('Bye world!');
+	console.log('Bye world!');
 };
 
-//* Passing arguments
+//! Use arrow functions
+
+//* 2. Passing arguments
 const passArguments = (arg1, arg2) => {
-  console.log(arg1 += arg2);
+	console.log((arg1 += arg2));
 };
-// function3(1, 1); // 2
 
-//* Returning values
+//! You can pass arguments into functions
+
+//* 3. Returning values
 const addTwoNumbers = (arg1, arg2) => {
-  return arg1 += arg2;
-}
-// addTwoNumbers(2, 2); // 4
+	return (arg1 += arg2);
+};
+addTwoNumbers(2, 2); // 4
 
-//* Global vs. Local scope
+//! Use the `return` keyword, if you want something back
+
+//* 4. Global vs. Local scope
 
 let globalVariable = 'Everyone can see me!';
 
 const whoCanSeeMe = () => {
-  let localVariable = 'Only secret agents can read me!';
-  console.log(localVariable);
+	let localVariable = 'Only secret agents can read me!';
+	console.log(localVariable);
+	console.log(globalVariable);
 };
 
-// console.log(globalVariable); // undefined
-// console.log(localVariable); // undefined
-// console.log(whoCanSeeMe());
+// whoCanSeeMe();
 
-//* Same variable name with DIFFERENT scopes
-// local scope > global scope
+//! Global: everyone can see it
+//! Local: only certain functions can see it
 
-let someVar = 'Thing1';
+//* 5. Same variable name with DIFFERENT scopes
+
+let someVar = 'Global';
 
 const whoseVariableIsIt = () => {
-  let someVar = 'Thing2';
-  
-  return someVar;
+	let someVar = 'Local';
+
+	return someVar;
 };
 
-whoseVariableIsIt(); // 'Thing2'
+whoseVariableIsIt(); // 'Local'
 
-//* Undefined values
+//!  Local > Global, if they share the same names
+
+//* 6. Undefined values
 // if theres no return inside a function, it will return undefined
-// returns are optional, but recommended
 const undefinedValue = () => {
-  someVar += 'Hello';
+	someVar += 'Hello';
 };
 
-undefinedValue(); // undefined
+console.log(undefinedValue()); // undefined
 
-//! FIFO Practice
+//! If there's no return or console.log, you will get `undefined`
+
+//! 7. FIFO Challenge:
 // When I worked in a restaurant, we cycled through shipments of food using FIFO...
 // New items are placed in the back
 // Old items are taken off the front
 
+//! 1. Create an array that represents a restaurant cold room. Name it whatever you want.
+//! 1. Create a function named `FIFO` that takes in 2 arguments `array` and `newItem`
+//! 2. Add the `newItem` to the end of the array
+//! 3. Remove the `oldItem`, and return it
+//! 4. Call the function to test if it works
+
 const FIFO = (array, newItem) => {
-  // new item is placed in the back
-  array.push(newItem); 
-  // old item is taken off front
-  let oldItem = array.shift();
-  return oldItem;
+	// new item is placed in the back
+	array.push(newItem);
+	// old item is taken off front
+	let oldItem = array.shift();
+	return oldItem;
 };
 
 const walkInCooler = ['🥑', '🥦', '🥩', '🧀'];
