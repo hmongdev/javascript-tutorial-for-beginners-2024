@@ -14,6 +14,8 @@ let myBankAccount = 0;
 myBankAccount = myBankAccount + 1; // 1
 myBankAccount++; // 1
 
+myBankAccount--; // -1
+
 // 3. Augmented Assignment
 myBankAccount += 10;
 myBankAccount *= 5;
@@ -21,20 +23,20 @@ myBankAccount /= 2;
 myBankAccount -= 30;
 
 // 4. Concatenation
-let sentence = 'I am walking' + 'to the park.';
+let sentence = 'I am walking ' + 'to the park.';
 // console.log(sentence);
 
 // 5. Methods: .length
-let greeting = 'Hello world'; // 12
+let greeting =
+	'Hello world;laksjdf;ljas;lkdfjaosidjvo;ajwe;klfgnaw;lkf;lkasdfl;asdl;kfjaslkdfj;laskdjf'; // 11
 // console.log(greeting.length); // ???
 
 // how does it know how to count?
-// zero-based indexing
+// zero-based indexing = variableName[indexNumber]
 
-// bracket notation = variable[index]
-console.log(greeting[0]); // 'H'
+// console.log(greeting[0]); // 'H'
 
 greeting[0] = 'J';
-console.log(greeting); // "Jello world!"
+console.log(greeting);
 
 //! Strings are IMMUTABLE => cannot be changed
