@@ -13,30 +13,37 @@ const newFunction = () => {
 	console.log('Bye world!');
 };
 
-//! Use arrow functions
+// oldFunction(); // Hello world!
+// newFunction(); // Bye world!
+
+//! Create functions by declaring
+//! Call function by invoking it ()
 
 //* 2. Passing arguments
 const passArguments = (arg1, arg2) => {
 	console.log((arg1 += arg2));
 };
 
-//! You can pass arguments into functions
+// passArguments(2, 2); // 4
+// passArguments(15, 35); // 50
+
+//! You can pass (arguments) into functions
+
 
 //* 3. Returning values
 const addTwoNumbers = (arg1, arg2) => {
 	return (arg1 += arg2);
 };
-addTwoNumbers(2, 2); // 4
+
+// console.log(addTwoNumbers(2, 2)); // 4
 
 //! Use the `return` keyword, if you want something back
 
 //* 4. Global vs. Local scope
-
 let globalVariable = 'Everyone can see me!';
 
 const whoCanSeeMe = () => {
-	let localVariable = 'Only secret agents can read me!';
-	console.log(localVariable);
+	let localVariable = 'Only this function can see me!';
 	console.log(globalVariable);
 };
 
@@ -45,8 +52,7 @@ const whoCanSeeMe = () => {
 //! Global: everyone can see it
 //! Local: only certain functions can see it
 
-//* 5. Same variable name with DIFFERENT scopes
-
+//* 5. SAME variable names with DIFFERENT scopes
 let someVar = 'Global';
 
 const whoseVariableIsIt = () => {
@@ -55,7 +61,7 @@ const whoseVariableIsIt = () => {
 	return someVar;
 };
 
-whoseVariableIsIt(); // 'Local'
+// console.log(whoseVariableIsIt()); // ??
 
 //!  Local > Global, if they share the same names
 
@@ -70,7 +76,7 @@ console.log(undefinedValue()); // undefined
 //! If there's no return or console.log, you will get `undefined`
 
 //! 7. FIFO Challenge:
-// When I worked in a restaurant, we cycled through shipments of food using FIFO...
+// I used to work in a restaurant, we cycled through shipments of food using FIFO...
 // New items are placed in the back
 // Old items are taken off the front
 
@@ -83,11 +89,14 @@ console.log(undefinedValue()); // undefined
 const walkInCooler = [];
 
 const FIFO = (array, newItem) => {
-	// code logic
 	array.push(newItem);
 	let oldItem = array.unshift();
 	return oldItem;
 };
 
+FIFO(walkInCooler, '🥩');
 FIFO(walkInCooler, '🍎');
+FIFO(walkInCooler, '🥦');
+FIFO(walkInCooler, '🍜');
+
 console.log(walkInCooler);
