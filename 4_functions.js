@@ -80,15 +80,14 @@ console.log(undefinedValue()); // undefined
 //! 7d. Remove the `oldItem`, and return it
 //! 7e. Call the function to test if it works
 
+const walkInCooler = [];
+
 const FIFO = (array, newItem) => {
-	// new item is placed in the back
+	// code logic
 	array.push(newItem);
-	// old item is taken off front
-	let oldItem = array.shift();
+	let oldItem = array.unshift();
 	return oldItem;
 };
 
-const walkInCooler = ['🥑', '🥦', '🥩', '🧀'];
-
-FIFO(walkInCooler, '🍗');
+FIFO(walkInCooler, '🍎');
 console.log(walkInCooler);
