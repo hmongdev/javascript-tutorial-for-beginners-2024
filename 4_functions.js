@@ -75,10 +75,10 @@ console.log(undefinedValue()); // undefined
 // Old items are taken off the front
 
 //! 1. Create an array that represents a restaurant cold room. Name it whatever you want.
-//! 1. Create a function named `FIFO` that takes in 2 arguments `array` and `newItem`
-//! 2. Add the `newItem` to the end of the array
-//! 3. Remove the `oldItem`, and return it
-//! 4. Call the function to test if it works
+//! 2. Create a function named `FIFO` that takes in 2 arguments `array` and `newItem`
+//! 3. Add the `newItem` to the end of the array
+//! 4. Remove the `oldItem`, and return it
+//! 5. Call the function to test if it works
 
 const FIFO = (array, newItem) => {
 	// new item is placed in the back
