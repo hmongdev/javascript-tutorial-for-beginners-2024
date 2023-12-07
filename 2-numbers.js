@@ -35,7 +35,7 @@ myBankAccount = ((myBankAccount + 10) * 5) / 2 - 30;
 
 //! Performs (1) math AND (2) assigns result to a variable
 
-// 4. Concatenation
+//* 4. Concatenation
 let greeting = 'Hello ';
 let noun = 'my name ';
 let verb = 'is ';
