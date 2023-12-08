@@ -8,16 +8,16 @@
 let groceryCart = [];
 groceryCart = [1, 'hello', '😉'];
 
-// bracket notation => access
+//* ZBI => access arrays
 // console.log(groceryCart[0]); // 1
 // console.log(groceryCart[1]); // 'hello'
 // console.log(groceryCart[2]); // '😉'
 
-//! Arrays are objects
-//! Arrays use ZBI [0]...
+//! Arrays can hold different data types
+//! Access arrays using ZBI array[i]...
 
 //* 2. Nested Arrays
-// Arrays inside outer array: [[], [], []];
+// Arrays inside an array: [[], [], []]; 
 // groceryCart = [ ['fruits'], ['veggies'], ['dairy'] ];
 
 groceryCart = [
@@ -26,12 +26,12 @@ groceryCart = [
 	['🧀', '🥛', '🧈'], // index 2 = dairy
 ];
 
-//* 3. Separate into Categories
+//* Separate into Categories
 let fruits = groceryCart[0];
 let veggies = groceryCart[1];
 let dairy = groceryCart[2];
 
-//* 4. Select 1 SPECIFIC item
+//* Select 1 SPECIFIC item
 let broccoli = groceryCart[1][0];
 // console.log(broccoli);
 
@@ -46,7 +46,7 @@ let potato = groceryCart[1][2];
 
 // console.log(milk, potato);
 
-//* 5. ADD items
+//* 3. ADD items
 //* .push() => add to END of array
 //* .unshift() => add to START of array
 
@@ -67,13 +67,13 @@ let potato = groceryCart[1][2];
 // empty groceryCart
 groceryCart = [];
 
-// empty arrays
+// 3 empty arrays
 fruits = [];
 veggies = [];
 dairy = [];
 
 // add items into each array
-fruits.push('🍎', '🥛', '🍌');
+fruits.push('🍎', '🍉', '🍌');
 veggies.push('🌶️', '🥕', '🥬');
 dairy.push('🧀', '🥛', '🧈');
 
@@ -85,7 +85,7 @@ groceryCart.unshift(dairy);
 // 3 nested arrays inside groceryCart
 // console.log(groceryCart);
 
-//* 6. REMOVE items
+//* 4. REMOVE items
 //* .pop()   => remove LAST item
 //* .shift() => remove FIRST item
 
